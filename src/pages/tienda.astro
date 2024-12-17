@@ -4,9 +4,65 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ProductCard from '../components/ProductCard.astro';
 
-const response = await fetch('http://localhost:4321/images/products.json');
-const data = await response.json();
-const { products } = data;
+// Add error handling for the fetch
+let products = [];
+try {
+  const response = await fetch('http://localhost:4321/images/products.json', {
+    timeout: 5000, // 5 second timeout
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  
+  const data = await response.json();
+  products = data.products;
+} catch (error) {
+  console.error('Error fetching products:', error);
+  // Provide fallback data
+  products = [
+    {
+      id: "vela-por-defecto",
+      name: 'Default Product',
+      price: 0,
+      // Add other required fields
+	  description:"Vela especial",
+	  category: "natural",
+	  image: "/images/vela-o1.jpg"
+
+    },
+	{
+	  id: "vela-lavanda",
+	  name: "Vela de Lavanda",
+	  description: "Elaborada con cera de soja y aceites esenciales de lavanda, perfecta para momentos de relajación.",
+	  price: 85,
+	  category: "natural",
+	  image: "/images/vela-1.jpg"
+	},
+	{
+	  id: "vela-vainilla",
+	  name: "Vela de Vainilla", 
+	  description: "Dulce y acogedora, esta vela de cera natural creará un ambiente cálido y reconfortante.",
+	  price: 75,
+	  category: "natural",
+	  image: "/images/vela-2.jpg"
+	},
+	{
+	  id: "vela-citrus",
+	  name: "Vela Citrus",
+	  description: "Mezcla refrescante de cítricos que llenará tu espacio de energía positiva.",
+	  price: 80,
+	  category: "natural", 
+	  image: "/images/vela-3.jpg"
+	}
+  ];
+}
+
+
+
 ---
 
 <Layout title="Tienda" description="Explora nuestra colección de velas artesanales y encuentra la perfecta para ti">
