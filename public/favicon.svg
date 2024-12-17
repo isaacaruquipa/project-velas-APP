@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Velas con Alma</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="#F6AD55" cx="64" cy="64" r="64"/>
+        <path d="M64,32 C68.418278,32 72,35.581722 72,40 L72,88 C72,92.418278 68.418278,96 64,96 C59.581722,96 56,92.418278 56,88 L56,40 C56,35.581722 59.581722,32 64,32 Z" fill="#FFFFFF"/>
+        <path d="M64,24 C66.209139,24 68,25.790861 68,28 L68,36 C68,38.209139 66.209139,40 64,40 C61.790861,40 60,38.209139 60,36 L60,28 C60,25.790861 61.790861,24 64,24 Z" fill="#FFFFFF"/>
+    </g>
+</svg>

@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ProductCard from '../components/ProductCard.astro';
+
+const response = await fetch('http://localhost:4321/images/products.json');
+const data = await response.json();
+const { products } = data;
+---
+
+<Layout title="Tienda" description="Explora nuestra colección de velas artesanales y encuentra la perfecta para ti">
+	<Header />
+	<main class="pt-32 pb-20">
+		<div class="container mx-auto px-4">
+			<h1 class="text-4xl md:text-5xl font-serif font-bold text-primary text-center mb-12">Nuestra Tienda</h1>
+			
+			<!-- Filtros y Ordenamiento -->
+			<div class="flex flex-wrap gap-4 mb-8">
+				<select class="px-4 py-2 border border-primary/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50">
+					<option value="">Ordenar por</option>
+					<option value="price-asc">Precio: Menor a Mayor</option>
+					<option value="price-desc">Precio: Mayor a Menor</option>
+					<option value="name">Nombre</option>
+				</select>
+				
+				<select class="px-4 py-2 border border-primary/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50">
+					<option value="">Filtrar por Categoría</option>
+					<option value="natural">Cera Natural</option>
+					<option value="eco">Mechas Ecológicas</option>
+					<option value="aroma">Fragancias</option>
+				</select>
+			</div>
+
+			<!-- Productos -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				{products.map((product) => (
+					<ProductCard {...product} />
+				))}
+			</div>
+
+			<!-- Políticas de Compra -->
+			<section class="mt-16">
+				<h2 class="text-3xl font-serif font-bold text-primary mb-8">Información de Compra</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div>
+						<h3 class="font-serif font-bold text-primary mb-4">Envíos</h3>
+						<p class="text-primary/80">
+							Realizamos envíos a toda Bolivia. El tiempo de entrega varía según la ubicación.
+							Envío gratis en La Paz para compras mayores a Bs. 200.
+						</p>
+					</div>
+					<div>
+						<h3 class="font-serif font-bold text-primary mb-4">Métodos de Pago</h3>
+						<p class="text-primary/80">
+							Aceptamos transferencias bancarias, tarjetas de crédito/débito y pagos en efectivo contra entrega en La Paz.
+						</p>
+					</div>
+					<div>
+						<h3 class="font-serif font-bold text-primary mb-4">Devoluciones</h3>
+						<p class="text-primary/80">
+							Si no estás satisfecho con tu compra, tienes 7 días para devolverla. El producto debe estar sin usar y en su empaque original.
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<Footer />
+</Layout>

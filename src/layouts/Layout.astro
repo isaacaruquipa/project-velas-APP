@@ -1,0 +1,31 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Velas artesanales con historia y propósito" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description}>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Velas con Alma</title>
+	</head>
+	<body class="bg-white text-primary">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--accent: 246, 173, 85;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da8d45 30%, white 60%);
+	}
+</style>

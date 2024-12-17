@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Productos" description="Descubre nuestra colección de velas artesanales hechas con cera natural y fragancias únicas">
+	<Header />
+	<main class="pt-32 pb-20">
+		<div class="container mx-auto px-4">
+			<h1 class="text-4xl md:text-5xl font-serif font-bold text-primary text-center mb-12">Nuestros Productos</h1>
+			
+			<!-- Categorías de Productos -->
+			<section class="mb-16">
+				<h2 class="text-3xl font-serif text-primary mb-8">Velas Artesanales</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Cera Natural -->
+					<article class="bg-white rounded-lg shadow-sm overflow-hidden">
+						<div class="aspect-w-3 aspect-h-2">
+							<img src="/images/vela-natural.jpg" alt="Vela de Cera Natural" class="object-cover w-full h-full">
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-serif font-bold text-primary mb-2">Velas de Cera Natural</h3>
+							<p class="text-primary/80 mb-4">
+								Elaboradas con cera 100% natural, nuestras velas son eco-friendly y libres de toxinas.
+							</p>
+							<a href="/tienda/cera-natural" class="text-accent hover:text-accent/80 font-medium">Ver productos →</a>
+						</div>
+					</article>
+
+					<!-- Mechas Ecológicas -->
+					<article class="bg-white rounded-lg shadow-sm overflow-hidden">
+						<div class="aspect-w-3 aspect-h-2">
+							<img src="/images/mecha-eco.jpg" alt="Vela con Mecha Ecológica" class="object-cover w-full h-full">
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-serif font-bold text-primary mb-2">Mechas Ecológicas</h3>
+							<p class="text-primary/80 mb-4">
+								Utilizamos mechas de algodón orgánico que proporcionan una combustión limpia y duradera.
+							</p>
+							<a href="/tienda/mechas-eco" class="text-accent hover:text-accent/80 font-medium">Ver productos →</a>
+						</div>
+					</article>
+
+					<!-- Fragancias Únicas -->
+					<article class="bg-white rounded-lg shadow-sm overflow-hidden">
+						<div class="aspect-w-3 aspect-h-2">
+							<img src="/images/fragancias.jpg" alt="Velas con Fragancias Únicas" class="object-cover w-full h-full">
+						</div>
+						<div class="p-6">
+							<h3 class="text-xl font-serif font-bold text-primary mb-2">Fragancias Únicas</h3>
+							<p class="text-primary/80 mb-4">
+								Aromas cuidadosamente seleccionados para crear experiencias sensoriales únicas.
+							</p>
+							<a href="/tienda/fragancias" class="text-accent hover:text-accent/80 font-medium">Ver productos →</a>
+						</div>
+					</article>
+				</div>
+			</section>
+		</div>
+	</main>
+	<Footer />
+</Layout>

@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Blog" description="Descubre artículos sobre el arte de hacer velas y consejos para crear ambientes acogedores">
+	<Header />
+	<main class="pt-32 pb-20">
+		<div class="container mx-auto px-4">
+			<h1 class="text-4xl md:text-5xl font-serif font-bold text-primary text-center mb-12">Blog</h1>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<!-- Artículo 1 -->
+				<article class="bg-white rounded-lg shadow-sm overflow-hidden">
+					<div class="aspect-w-16 aspect-h-9">
+						<img src="/images/blog-1.jpg" alt="El Arte de Hacer Velas" class="object-cover w-full h-full">
+					</div>
+					<div class="p-6">
+						<h2 class="text-xl font-serif font-bold text-primary mb-2">El Arte de Hacer Velas</h2>
+						<p class="text-primary/80 mb-4">
+							Descubre los secretos detrás de la creación de velas artesanales y cómo elegimos nuestros materiales.
+						</p>
+						<div class="flex items-center justify-between">
+							<span class="text-sm text-primary/60">15 de Marzo, 2024</span>
+							<a href="/blog/arte-de-hacer-velas" class="text-accent hover:text-accent/80 font-medium">Leer más →</a>
+						</div>
+					</div>
+				</article>
+
+				<!-- Artículo 2 -->
+				<article class="bg-white rounded-lg shadow-sm overflow-hidden">
+					<div class="aspect-w-16 aspect-h-9">
+						<img src="/images/blog-2.jpg" alt="Creando Ambientes Acogedores" class="object-cover w-full h-full">
+					</div>
+					<div class="p-6">
+						<h2 class="text-xl font-serif font-bold text-primary mb-2">Creando Ambientes Acogedores</h2>
+						<p class="text-primary/80 mb-4">
+							Consejos prácticos para transformar cualquier espacio usando velas aromáticas.
+						</p>
+						<div class="flex items-center justify-between">
+							<span class="text-sm text-primary/60">10 de Marzo, 2024</span>
+							<a href="/blog/ambientes-acogedores" class="text-accent hover:text-accent/80 font-medium">Leer más →</a>
+						</div>
+					</div>
+				</article>
+
+				<!-- Artículo 3 -->
+				<article class="bg-white rounded-lg shadow-sm overflow-hidden">
+					<div class="aspect-w-16 aspect-h-9">
+						<img src="/images/blog-3.jpg" alt="Testimonios de Clientes" class="object-cover w-full h-full">
+					</div>
+					<div class="p-6">
+						<h2 class="text-xl font-serif font-bold text-primary mb-2">Testimonios que Iluminan</h2>
+						<p class="text-primary/80 mb-4">
+							Historias reales de cómo nuestras velas han transformado hogares y momentos especiales.
+						</p>
+						<div class="flex items-center justify-between">
+							<span class="text-sm text-primary/60">5 de Marzo, 2024</span>
+							<a href="/blog/testimonios" class="text-accent hover:text-accent/80 font-medium">Leer más →</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>

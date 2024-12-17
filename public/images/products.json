@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "vela-lavanda",
+      "name": "Vela de Lavanda",
+      "description": "Elaborada con cera de soja y aceites esenciales de lavanda, perfecta para momentos de relajación.",
+      "price": 85,
+      "category": "natural",
+      "image": "/images/vela-1.jpg"
+    },
+    {
+      "id": "vela-vainilla",
+      "name": "Vela de Vainilla",
+      "description": "Dulce y acogedora, esta vela de cera natural creará un ambiente cálido y reconfortante.",
+      "price": 75,
+      "category": "natural",
+      "image": "/images/vela-2.jpg"
+    },
+    {
+      "id": "vela-citrus",
+      "name": "Vela Citrus",
+      "description": "Mezcla refrescante de cítricos que llenará tu espacio de energía positiva.",
+      "price": 80,
+      "category": "natural",
+      "image": "/images/vela-3.jpg"
+    }
+  ]
+}

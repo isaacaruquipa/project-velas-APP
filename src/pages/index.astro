@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Inicio">
+	<Header />
+	<main class="pt-20">
+		<!-- Hero Section -->
+		<section class="relative h-screen flex items-center justify-center bg-gradient-to-r from-secondary/10 to-accent/10">
+			<div class="container mx-auto px-4 text-center">
+				<h1 class="text-5xl md:text-6xl font-serif font-bold text-primary mb-6">Velas con Alma</h1>
+				<p class="text-xl md:text-2xl text-primary/80 max-w-2xl mx-auto mb-8">
+					Cada vela está hecha a mano con dedicación, utilizando cera natural y fragancias únicas para crear experiencias de calma, alegría y equilibrio.
+				</p>
+				<a href="/tienda" class="inline-block bg-accent text-white px-8 py-3 rounded-full hover:bg-accent/90 transition-colors">
+					Descubre nuestras velas
+				</a>
+			</div>
+		</section>
+
+		<!-- Historia Section -->
+		<section class="py-20 bg-white">
+			<div class="container mx-auto px-4">
+				<h2 class="text-4xl font-serif font-bold text-primary text-center mb-12">Nuestra Historia</h2>
+				<div class="max-w-3xl mx-auto">
+					<p class="text-lg text-primary/80 mb-6">
+						En un rincón cálido y lleno de sueños, nació Velas con Alma, un proyecto inspirado en la magia de los momentos simples que iluminan nuestra vida.
+					</p>
+					<p class="text-lg text-primary/80 mb-6">
+						Soy Lidia Aruquipa, una apasionada de la tranquilidad, los aromas y el arte de transformar hogares en refugios de paz.
+					</p>
+					<p class="text-lg text-primary/80 mb-6">
+						Cada vela que encuentras en Velas con Alma está hecha a mano con dedicación y cuidado. 
+						Usamos cera natural, mechas ecológicas y fragancias que evocan calma, alegría y equilibrio. 
+						Pero más allá de los materiales, lo que realmente distingue a nuestras velas es el alma que ponemos en cada una.
+					</p>
+					<p class="text-lg text-primary/80 mb-6">
+						Nuestro propósito no es solo ofrecer un producto, sino una experiencia: un momento para respirar, 
+						relajarse y reconectar contigo mismo y con tu entorno. Creemos en el poder de los pequeños detalles 
+						y en cómo algo tan simple como la llama de una vela puede transformar un espacio y hasta un día entero.
+					</p>
+					<div class="text-center mt-12">
+						<p class="text-xl text-accent font-serif italic">
+							✨ Porque cada luz tiene un propósito, y cada vela, un alma. ✨
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>

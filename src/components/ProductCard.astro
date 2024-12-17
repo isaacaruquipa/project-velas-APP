@@ -1,0 +1,30 @@
+---
+import AddToCartButton from './AddToCartButton.astro';
+
+interface Props {
+    id: string;
+    name: string;
+    description: string;
+    price: number;
+    image: string;
+    category: string;
+}
+
+const { id, name, description, price, image, category } = Astro.props;
+---
+
+<article class="bg-white rounded-lg shadow-sm overflow-hidden">
+    <div class="aspect-w-3 aspect-h-2">
+        <img src={image} alt={name} class="object-cover w-full h-full">
+    </div>
+    <div class="p-6">
+        <h2 class="text-xl font-serif font-bold text-primary mb-2">{name}</h2>
+        <p class="text-primary/80 mb-4">
+            {description}
+        </p>
+        <div class="flex justify-between items-center">
+            <span class="text-xl font-bold text-primary">Bs. {price}</span>
+            <AddToCartButton productId={id} price={price} />
+        </div>
+    </div>
+</article>
